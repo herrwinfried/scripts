@@ -1,5 +1,5 @@
 # scripts
 
-**All responsibility belongs to you.**
+**NOTE: All responsibility belongs to you.**
 
-**Tüm sorumluluk size aittir.**
+**NOT: Tüm sorumluluk size aittir.**
