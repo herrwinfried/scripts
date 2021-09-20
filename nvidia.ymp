@@ -1,0 +1,179 @@
+<metapackage xmlns:os="http://opensuse.org/Standards/One_Click_Install" xmlns="http://opensuse.org/Standards/One_Click_Install">
+  <group distversion="openSUSE Tumbleweed">
+   <name>NVIDIA</name>
+                <summary>NVIDIA Drivers</summary>
+                <description>Only 64 Bit
+                  This package includes:
+                  - x11-video-nvidiaG05
+                  - x11-video-nvidiaG04</description>
+                <summary lang="tr_TR">NVIDIA Sürücüleri</summary>
+                <description lang="tr_TR">Sadece 64 Bit
+                  Şunları İçerir:
+                  - x11-video-nvidiaG05
+                  - x11-video-nvidiaG04</description>
+    <repositories>
+    <repository recommended="true">
+        <name>NVIDIA</name>
+        <summary>Official NVIDIA Driver</summary>
+         <summary lang="tr_TR">Resmi NVIDIA Sürücüsü</summary>
+         <description>Official NVIDIA Driver</description>
+         <description lang="tr_TR">Resmi NVIDIA Sürücüsü</description>
+        <url>https://download.nvidia.com/opensuse/tumbleweed</url>
+      </repository>
+    </repositories>
+
+    <software>
+      <item recommended="false">
+        <name>x11-video-nvidiaG04</name>
+        <summary>x11-video-nvidiaG04 Driver</summary>
+        <summary lang="tr_TR">x11-video-nvidiaG04 Sürücüsü</summary>
+
+        <description>x11-video-nvidiaG04 Driver</description>
+        <description lang="tr_TR">x11-video-nvidiaG04 Sürücüsü</description>
+   </item>
+   <item recommended="true">
+    <name>x11-video-nvidiaG05</name>
+    <summary>x11-video-nvidiaG05 Driver</summary>
+    <summary lang="tr_TR">x11-video-nvidiaG05 Sürücüsü</summary>
+
+    <description>x11-video-nvidiaG05 Driver</description>
+    <description lang="tr_TR">x11-video-nvidiaG05 Sürücüsü</description>
+</item>
+    </software>
+  </group>
+  <group distversion="openSUSE Leap 15.1">
+    <name>NVIDIA</name>
+                 <summary>NVIDIA Drivers</summary>
+                 <description> Only 64 Bit
+                   This package includes:
+                   - x11-video-nvidiaG05
+                   - x11-video-nvidiaG04
+                   - x11-video-nvidiaG03</description>
+                 <summary lang="tr_TR">NVIDIA Sürücüleri</summary>
+                 <description lang="tr_TR">Sadece 64 Bit
+                   Şunları İçerir:
+                   - x11-video-nvidiaG05
+                   - x11-video-nvidiaG04
+                   - x11-video-nvidiaG03</description>
+     <repositories>
+     <repository recommended="true">
+      <name>NVIDIA</name>
+      <summary>Official NVIDIA Driver</summary>
+       <summary lang="tr_TR">Resmi NVIDIA Sürücüsü</summary>
+       <description>Official NVIDIA Driver</description>
+       <description lang="tr_TR">Resmi NVIDIA Sürücüsü</description>
+          <url>https://download.nvidia.com/opensuse/leap/15.1</url>
+       </repository>
+     </repositories>
+ 
+     <software>
+      <item recommended="false">
+        <name>x11-video-nvidiaG03</name>
+        <summary>x11-video-nvidiaG03 Driver</summary>
+        <summary lang="tr_TR">x11-video-nvidiaG03 Sürücüsü</summary>
+        <description>x11-video-nvidiaG03 Driver</description>
+        <description lang="tr_TR">x11-video-nvidiaG03 Sürücüsü</description>
+    </item>
+    <item recommended="false">
+      <name>x11-video-nvidiaG04</name>
+      <summary>x11-video-nvidiaG04 Driver</summary>
+      <summary lang="tr_TR">x11-video-nvidiaG04 Sürücüsü</summary>
+
+      <description>x11-video-nvidiaG04 Driver</description>
+      <description lang="tr_TR">x11-video-nvidiaG04 Sürücüsü</description>
+ </item>
+ <item recommended="true">
+  <name>x11-video-nvidiaG05</name>
+  <summary>x11-video-nvidiaG05 Driver</summary>
+  <summary lang="tr_TR">x11-video-nvidiaG05 Sürücüsü</summary>
+
+  <description>x11-video-nvidiaG05 Driver</description>
+  <description lang="tr_TR">x11-video-nvidiaG05 Sürücüsü</description>
+</item>
+     </software>
+   </group>
+  <group distversion="openSUSE Leap 15.2">
+    <name>NVIDIA</name>
+                 <summary>NVIDIA Drivers</summary>
+                 <description>Only 64 Bit
+                   This package includes:
+                   - x11-video-nvidiaG05
+                   - x11-video-nvidiaG04</description>
+                 <summary lang="tr_TR">NVIDIA Sürücüleri</summary>
+                 <description lang="tr_TR">Sadece 64 Bit
+                   Şunları İçerir:
+                   - x11-video-nvidiaG05
+                   - x11-video-nvidiaG04</description>
+     <repositories>
+     <repository recommended="true">
+      <name>NVIDIA</name>
+      <summary>Official NVIDIA Driver</summary>
+       <summary lang="tr_TR">Resmi NVIDIA Sürücüsü</summary>
+       <description>Official NVIDIA Driver</description>
+       <description lang="tr_TR">Resmi NVIDIA Sürücüsü</description>
+         <url>https://download.nvidia.com/opensuse/leap/15.2</url>
+       </repository>
+     </repositories>
+ 
+     <software>
+      <item recommended="false">
+        <name>x11-video-nvidiaG04</name>
+        <summary>x11-video-nvidiaG04 Driver</summary>
+        <summary lang="tr_TR">x11-video-nvidiaG04 Sürücüsü</summary>
+
+        <description>x11-video-nvidiaG04 Driver</description>
+        <description lang="tr_TR">x11-video-nvidiaG04 Sürücüsü</description>
+   </item>
+   <item recommended="true">
+    <name>x11-video-nvidiaG05</name>
+    <summary>x11-video-nvidiaG05 Driver</summary>
+    <summary lang="tr_TR">x11-video-nvidiaG05 Sürücüsü</summary>
+
+    <description>x11-video-nvidiaG05 Driver</description>
+    <description lang="tr_TR">x11-video-nvidiaG05 Sürücüsü</description>
+</item>
+     </software>
+   </group>
+   <group distversion="openSUSE Leap 15.3">
+    <name>NVIDIA</name>
+                 <summary>NVIDIA Drivers</summary>
+                 <description>Only 64 Bit
+                   This package includes:
+                   - x11-video-nvidiaG05
+                   - x11-video-nvidiaG04</description>
+                 <summary lang="tr_TR">NVIDIA Sürücüleri</summary>
+                 <description lang="tr_TR">Sadece 64 Bit
+                   Şunları İçerir:
+                   - x11-video-nvidiaG05
+                   - x11-video-nvidiaG04</description>
+     <repositories>
+     <repository recommended="true">
+      <name>NVIDIA</name>
+      <summary>Official NVIDIA Driver</summary>
+       <summary lang="tr_TR">Resmi NVIDIA Sürücüsü</summary>
+       <description>Official NVIDIA Driver</description>
+       <description lang="tr_TR">Resmi NVIDIA Sürücüsü</description>
+          <url>https://download.nvidia.com/opensuse/leap/15.3</url>
+       </repository>
+     </repositories>
+ 
+     <software>
+        <item recommended="false">
+         <name>x11-video-nvidiaG04</name>
+         <summary>x11-video-nvidiaG04 Driver</summary>
+         <summary lang="tr_TR">x11-video-nvidiaG04 Sürücüsü</summary>
+
+         <description>x11-video-nvidiaG04 Driver</description>
+         <description lang="tr_TR">x11-video-nvidiaG04 Sürücüsü</description>
+    </item>
+    <item recommended="true">
+     <name>x11-video-nvidiaG05</name>
+     <summary>x11-video-nvidiaG05 Driver</summary>
+     <summary lang="tr_TR">x11-video-nvidiaG05 Sürücüsü</summary>
+
+     <description>x11-video-nvidiaG05 Driver</description>
+     <description lang="tr_TR">x11-video-nvidiaG05 Sürücüsü</description>
+ </item>
+     </software>
+   </group>
+</metapackage>

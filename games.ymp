@@ -1,0 +1,106 @@
+<metapackage xmlns:os="http://opensuse.org/Standards/One_Click_Install" xmlns="http://opensuse.org/Standards/One_Click_Install">
+  <group distversion="openSUSE Tumbleweed">
+   <name>Basic packages for the game</name>
+                <summary>Packages required for the beginner.</summary>
+                <description>This package includes:
+                  - steam
+                  - gamemoded
+                  - lutris</description>
+
+                  <name lang="tr_TR">Oyun için temel paketler</name>
+                <summary lang="tr_TR">Başlangıç için gerekli paketler.</summary>
+                <description lang="tr_TR">Şunları İçerir:
+                  - steam
+                  - gamemoded
+                  - lutris</description>
+    <repositories>
+    <repository recommended="true">
+        <name>openSUSE:Tumbleweed:NonFree</name>
+        <summary>Non Free parts of openSUSE Tumbleweed distribution.</summary>
+        <description>Non free or non open source parts of openSUSE Tumbleweed.</description>
+         <summary lang="tr_TR">openSUSE Tumbleweed dağıtımının Ücretsiz olmayan kısımları.</summary>
+        <description lang="tr_TR">openSUSE Tumbleweed dağıtımının Ücretsiz olmayan kısımları.</description>
+        <url>http://download.opensuse.org/tumbleweed/repo/non-oss/</url>
+      </repository>
+
+      <repository recommended="true">
+        <name>openSUSE:Tumbleweed</name>
+        <summary>Tumbleweed</summary>
+        <description>Tumbleweed is the openSUSE Rolling Release
+
+This OBS Project represents the content of the currently published
+snapshot. The newer repository for next publish can be found in openSUSE:Factory standard repository.
+</description>
+
+  <summary lang="tr_TR">Tumbleweed</summary>
+        <description lang="tr_TR">Tumbleweed, openSUSE Sürüklenen Sürümüdür Bu OBS Projesi, şu anda yayınlanan anlık görüntünün içeriğini temsil eder. Bir sonraki yayın için daha yeni depo, openSUSE:Tumbleweeds standart deposunda bulunabilir.
+</description>
+        <url>http://download.opensuse.org/tumbleweed/repo/oss/</url>
+      </repository>
+
+
+    </repositories>
+
+    <software>
+       <item>
+        <name>steam</name>
+        <summary>Installer for Valve's digital software distribution service</summary>
+
+        <summary lang="tr_TR">Valve'in dijital yazılım dağıtım hizmeti için yükleyici</summary>
+        <description>Steam is a software distribution service with an online store, automated
+installation, automatic updates, achievements, SteamCloud synchronized
+savegame and screenshot functionality, and many social features.
+
+This package will fetch and install the Steam bootstrap. Start Steam to
+complete the installation of the client for the current user.</description>
+
+<description lang="tr_TR">Steam, çevrimiçi mağaza, otomatik kurulum, otomatik güncellemeler, başarılar, SteamCloud senkronize kayıt oyunu ve ekran görüntüsü işlevi ve birçok sosyal özelliğe sahip bir yazılım dağıtım hizmetidir. Bu paket Steam önyüklemesini getirecek ve Factorykuracaktır. Mevcut kullanıcı için istemcinin kurulumunu tamamlamak üzere Steam'i başlatın.</description>
+      </item>
+
+        <item>
+        <name>gamemoded</name>
+        <summary>The GameMode daemon required by GameMode enabled games</summary>
+        <description>GameMode is a daemon/lib combo for Linux that allows games to request
+a set of optimisations be temporarily applied to the host OS.
+
+The GameMode daemon is installed as a D-Bus Service and will start
+automatically on first access by a client.</description>
+
+ <summary lang="tr_TR">GameMode özellikli oyunların gerektirdiği GameMode arka plan programı</summary>
+        <description lang="tr_TR">GameMode, Linux için oyunların istekte bulunmasına izin veren bir arka plan programı/kütüphane birleşimidir.
+ana bilgisayar işletim sistemine geçici olarak bir dizi optimizasyon uygulanacaktır.
+
+GameMode arka plan programı bir D-Bus Hizmeti olarak yüklenir ve başlatılır
+bir istemci tarafından ilk erişimde otomatik olarak.</description>
+
+      </item>
+
+        <item>
+        <name>lutris</name>
+        <summary lang="tr_TR">Oyun kurulumu ve yürütme yöneticisi</summary>
+        <description lang="tr_TR">Lutris, toplamaya ve yönetmeye (kurulum, yapılandırma ve başlatma) izin verir
+herhangi bir kaynaktan edinilen tüm oyunlar, tek bir arayüzde.
+Buna örneğin Steam veya GOG oyunları, Windows oyunları (WINE),
+veya öykünülmüş konsol oyunları ve tarayıcı oyunları.</description>
+
+ <summary>Manager for game installation and execution</summary>
+        <description>Lutris allows to gather and manage (install, configure and launch)
+all games acquired from any source, in a single interface.
+This includes, for example, Steam or GOG games, Windows games (WINE),
+or emulated console games and browser games.</description>
+      </item>
+          <item>
+        <name>PlayOnLinux</name>
+        <summary lang="tr_TR">Windows oyunlarınızı GNU/Linux'ta oynayın</summary>
+        <description lang="tr_TR">PlayOnLinux, kolayca kurmanıza ve kullanmanıza izin veren bir yazılım parçasıdır. Microsoft Windows ile çalışacak şekilde tasarlanmış çok sayıda oyun ve uygulama. Şu anda çok az oyun GNU/Linux ile uyumlu ve kesinlikle bu sisteme geçişi engelleyen bir faktördür. PlayOnLinux, bu soruna ücretsiz, erişilebilir ve verimli bir çözüm getiriyor.</description>
+
+ <summary>Play your Windows games on GNU/Linux</summary>
+        <description>PlayOnLinux is a piece of software which allows you to easily install and use
+numerous games and apps designed to run with Microsoft Windows.
+Few games are compatible with GNU/Linux at the moment and it certainly is
+a factor preventing the migration to this system.
+PlayOnLinux brings a cost-free, accessible and efficient solution to this problem.</description>
+      </item>
+    </software>
+  </group>
+</metapackage>
