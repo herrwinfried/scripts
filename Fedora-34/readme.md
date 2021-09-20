@@ -1,4 +1,18 @@
-# OpenSUSE Tumbleweed
+# Fedora 34
+
+## Nereye Klasörü koymalıyız?
+Normal kullanıcı hesabınız home klasörün içinde tüm dosyalar ve klasörler ile birlikte Fedora-34 adlı klasörün içinde olması gerek
+```bash
+** home
+* {USER}
+-- Fedora-34
+- appimages
+- bundles
+- rpms
+- runs
+- readme.md
+- setup.sh
+```
 
 `--snap` - snapd/snap da yükler
 

@@ -1,5 +1,19 @@
 # OpenSUSE Tumbleweed
 
+## Nereye Klasörü koymalıyız?
+Normal kullanıcı hesabınız home klasörün içinde tüm dosyalar ve klasörler ile birlikte Tumbleweed adlı klasörün içinde olması gerek
+```bash
+** home
+* {USER}
+-- Tumbleweed
+- appimages
+- bundles
+- rpms
+- runs
+- readme.md
+- setup.sh
+```
+
 `--snap` - snapd/snap da yükler
 
 ### Örnek
