@@ -70,7 +70,7 @@ sudo dnf swap -y PackageKit-backend-zypp PackageKit-backend-dnf
 sudo zypper --gpg-auto-import-keys refresh && sudo dnf makecache -y
 }
 function basepackage {
-sudo zypper --gpg-auto-import-keys install --from packman ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec-full
+sudo zypper --gpg-auto-import-keys install -y --from packman ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec-full
 sudo dnf install -y zsh curl neofetch screenfetch git opi
 }
 function developerpackage {
