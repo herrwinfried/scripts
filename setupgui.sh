@@ -62,7 +62,7 @@ echo "$blue DNF ile Yüklenecek $white"
 fi
 fi
 ###################################################################
-elif [ "$distroselect" == "openSUSE Leap 15.2" ]; then
+elif [ "$distroselect" == "openSUSE Leap 15.3" ]; then
 if [ "$dnfvalue" == "--no-dnf" ]; then
 echo "$blue --no-dnf parametresinden dolayı zypper tercih ediliyor."
   sudo zypper --gpg-auto-import-keys in -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt
