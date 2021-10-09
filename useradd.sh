@@ -50,7 +50,19 @@ echo "$green Lütfen Parola Oluşturunuz:"
 echo "$red İşlem Sırasında Görünmeyebilir Parolanınız güvenlik gerekçesiyle. $white"
 passwd $usernamee
 echo "$blue Username: $usernamee"
-#fi
+#fi 
+elif [ "$distroselect" == "Fedora release 35 (Thirty Five)" ]; then
+echo "$white"
+echo "$magenta Kullanıcı Adınız?"
+read usernamee
+echo "$white $fontreset"
+##########################################################################
+sudo useradd -G whell $usernamee
+echo "$green Lütfen Parola Oluşturunuz:"
+echo "$red İşlem Sırasında Görünmeyebilir Parolanınız güvenlik gerekçesiyle. $white"
+passwd $usernamee
+echo "$blue Username: $usernamee"
+#fi elif [ "$distroselect" == "Fedora release 35 (Thirty Five)" ]; then
 elif [ "$distroselect" == "Arch Linux" ]; then
 echo "$white"
 echo "$magenta Kullanıcı Adınız?"
