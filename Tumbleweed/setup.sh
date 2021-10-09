@@ -88,9 +88,9 @@ function nvidiaG04 {
 }
 function repository {
 sudo zypper --gpg-auto-import-keys addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
-sudo zypper refresh
-sudo zypper dist-upgrade --from packman --allow-vendor-change
-sudo zypper install --from packman ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec-full vlc-codecs
+sudo zypper --gpg-auto-import-keys refresh
+sudo zypper dist-upgrade -y --from packman --allow-vendor-change
+sudo zypper install -y --from packman ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec-full vlc-codecs
 ######################################################
 sudo zypper --gpg-auto-import-keys addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA
 ######################################################
@@ -106,7 +106,7 @@ sudo zypper --gpg-auto-import-keys addrepo --refresh https://download.opensuse.o
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/vscode.repo'
 ######################################################
-sudo rpmkeys --import -y https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+sudo rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
 sudo sh -c 'echo -e "[gitlab.com_paulcarroty_vscodium_repo]\nname=gitlab.com_paulcarroty_vscodium_repo\nbaseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg" > /etc/zypp/repos.d/vscodium.repo'
 ######################################################
 sudo zypper install -y libicu
@@ -181,23 +181,24 @@ function game_video {
 }
 
 function rpms {
-	cd /home/$home_dir/$dir_dir/rpms
+	cd /home/$homefolder/Tumbleweed/rpms
 	sudo dnf install -y ./*.rpm
 	sudo dnf update --refresh -y
 }
 function runs {
-	cd /home/$home_dir/$dir_dir/runs
+	cd /home/$homefolder/Tumbleweed/runs
 	find . -iname '*.run' -exec chmod +x ./"{}" \;
 	find . -iname '*.run' -exec sudo ./"{}" \;
 }
 function bundles {
-	cd /home/$home_dir/$dir_dir/bundles
+	cd /home/$homefolder/Tumbleweed/bundles
 	find . -iname "*.bundle" -exec chmod +x ./"{}" \;
 	find . -iname "*.bundle" -exec sudo ./"{}" \;
 
 }
 function appimages {
-	cd /home/$home_dir/$dir_dir/appimages
+
+	cd /home/$homefolder/Tumbleweed/appimages
 	find . -iname "*.appimage" -exec chmod +x ./"{}" \;
 	find . -iname "*.appimage" -exec sudo ./"{}" \;
 }
@@ -206,11 +207,11 @@ update
 zramadd
 nvidiaG05
 #nvidiaG04
-repos
-dnf
-pakete
-snap_flatpak
-printer
+repository
+dnfsetup
+basepackage
+flatpak_snap
+printers
 desktop_dev
 web_dev
 ide_text
