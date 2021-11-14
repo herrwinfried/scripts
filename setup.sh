@@ -64,6 +64,15 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ##########################################
 sudo zypper --gpg-auto-import-keys refresh
 }
+function powershell {
+sudo zypper update
+sudo zypper in -y curl tar libicu60_2 libopenssl1_0_0
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.2.0/powershell-7.2.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+sudo mkdir -p /opt/microsoft/powershell
+sudo tar -xzf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/
+sudo ln -s /opt/microsoft/powershell/pwsh /usr/bin/pwsh
+sudo chmod +x /usr/bin/pwsh
+}
 function dnfsetup {
 sudo zypper --gpg-auto-import-keys install -y dnf rpm-repos-openSUSE
 sudo dnf swap -y PackageKit-backend-zypp PackageKit-backend-dnf
@@ -71,49 +80,22 @@ sudo zypper --gpg-auto-import-keys refresh && sudo dnf makecache -y
 }
 function basepackage {
 sudo zypper --gpg-auto-import-keys install -y --from packman ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec-full
-sudo dnf install -y zsh curl neofetch screenfetch git opi
+sudo dnf install -y zsh curl neofetch screenfetch git opi lzip unzip e2fsprogs
 }
 function developerpackage {
-    sudo dnf install -y nodejs-default python38 dotnet-sdk-5.0 llvm-clang icu
-    ###Swift Language
-    #cd /tmp/
-    #wget https://swift.org/builds/swift-5.4.3-release/centos8/swift-5.4.3-RELEASE/swift-5.4.3-RELEASE-centos8.tar.gz -O Swift.tar.gz
-    #tar xvzf /tmp/Swift*.tar.gz -C /tmp/
-    #sudo mkdir /opt/swift
-    #sudo mv /tmp/swift* /opt/swift
-    #sudo chown -R root:root /opt/swift
-    #wget -q -O - https://swift.org/keys/all-keys.asc | sudo gpg --import -
-   # echo 'export PATH=/opt/swift/usr/bin:$PATH' >> ~/.bashrc
-    ### Swift Language
+    sudo dnf install -y nodejs-default python38 python38-pip dotnet-sdk-5.0 llvm-clang icu
 }
-
 update
-repository
+if [ $1 == "--ps" ] || [ $1 == "--powershell" ] || [ $1 == "-ps" ]; then
+powershell
+fi
 dnfsetup
 basepackage
 developerpackage
-###################################################################
-elif [ "$distroselect" == "Fedora release 34 (Thirty Four)" ]; then
-function update {
-sudo dnf update --refresh -y
-}
-function repository {
-sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf update -y
-}
-function basepackage {
-sudo dnf install -y passwd cracklib-dicts iputils util-linux-user
-sudo dnf install -y git curl zsh wget dnf-plugins-core dnf-utils sudo neofetch screenfetch
-}
-function developerpackage {
-    sudo dnf install -y swift-lang dotnet-sdk-5.0 nodejs python3
-}
 
-update
-repository
-basepackage
-developerpackage
+#TW
 #fi
+
 ###################################################################
 elif [ "$distroselect" == "Fedora release 35 (Thirty Five)" ]; then
 function update {
