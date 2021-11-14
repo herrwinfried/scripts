@@ -83,7 +83,8 @@ sudo zypper --gpg-auto-import-keys install -y --from packman ffmpeg gstreamer-pl
 sudo dnf install -y zsh curl neofetch screenfetch git opi lzip unzip e2fsprogs
 }
 function developerpackage {
-    sudo dnf install -y nodejs-default python38 python38-pip dotnet-sdk-5.0 llvm-clang icu
+    sudo dnf install -y nodejs-default python38 python38-pip dotnet-sdk-5.0 llvm-clang icu gcc gcc-c++
+     sudo zypper install --type pattern devel_basis
 }
 update
 if [ $1 == "--ps" ] || [ $1 == "--powershell" ] || [ $1 == "-ps" ]; then
