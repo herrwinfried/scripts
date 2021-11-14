@@ -88,7 +88,7 @@ sudo dnf install -y brave-browser-nightly
 }
 function developerpackage {
     sudo dnf install -y nodejs-default python38 python38-pip dotnet-sdk-5.0 llvm-clang icu gcc gcc-c++
-     sudo zypper install --type pattern devel_basis
+     sudo zypper install --type -y pattern devel_basis
 }
 update
 if [ $1 == "--ps" ] || [ $1 == "--powershell" ] || [ $1 == "-ps" ]; then
