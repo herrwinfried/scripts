@@ -62,6 +62,9 @@ wget https://packages.microsoft.com/config/opensuse/15/prod.repo
 sudo mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ##########################################
+sudo rpm --import https://brave-browser-rpm-nightly.s3.brave.com/brave-core-nightly.asc
+sudo zypper addrepo https://brave-browser-rpm-nightly.s3.brave.com/x86_64/ brave-browser-nightly
+##########################################
 sudo zypper --gpg-auto-import-keys refresh
 }
 function powershell {
@@ -81,6 +84,7 @@ sudo zypper --gpg-auto-import-keys refresh && sudo dnf makecache -y
 function basepackage {
 sudo zypper --gpg-auto-import-keys install -y --from packman ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec-full
 sudo dnf install -y zsh curl neofetch screenfetch git opi lzip unzip e2fsprogs
+sudo dnf install -y brave-browser-nightly
 }
 function developerpackage {
     sudo dnf install -y nodejs-default python38 python38-pip dotnet-sdk-5.0 llvm-clang icu gcc gcc-c++
