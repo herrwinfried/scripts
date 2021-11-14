@@ -91,7 +91,7 @@ function developerpackage {
      sudo zypper install --type -y pattern devel_basis
 }
 update
-if [ $1 == "--ps" ] || [ $1 == "--powershell" ] || [ $1 == "-ps" ]; then
+if [[ $1 == "--ps" ]] || [[ $1 == "--powershell" ]] || [[ $1 == "-ps" ]]; then
 powershell
 fi
 dnfsetup
