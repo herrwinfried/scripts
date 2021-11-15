@@ -50,30 +50,30 @@ dnfvalue=$1
 if [ "$distroselect" == "openSUSE Tumbleweed" ]; then
 if [ "$dnfvalue" == "--no-dnf" ]; then
 echo "$blue --no-dnf parametresinden dolayı zypper tercih ediliyor."
-  sudo zypper --gpg-auto-import-keys in -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks
+  sudo zypper --gpg-auto-import-keys in -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks Mesa-devel libOSMesa-devel
 else 
 ##########
 if ! [ -x "$(command -v dnf)" ]; then
   echo "$red DNF Yüklü Olmadığından Zypper İle yüklenecek. $white" >&2
-  sudo zypper --gpg-auto-import-keys in -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks
+  sudo zypper --gpg-auto-import-keys in -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks Mesa-devel libOSMesa-devel
 else
 echo "$blue DNF ile Yüklenecek $white"
-  sudo dnf install -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks
+  sudo dnf install -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks Mesa-devel libOSMesa-devel
 fi
 fi
 ###################################################################
 elif [ "$distroselect" == "openSUSE Leap 15.3" ]; then
 if [ "$dnfvalue" == "--no-dnf" ]; then
 echo "$blue --no-dnf parametresinden dolayı zypper tercih ediliyor."
-  sudo zypper --gpg-auto-import-keys in -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks
+  sudo zypper --gpg-auto-import-keys in -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks Mesa-devel libOSMesa-devel
 else 
 ##########
 if ! [ -x "$(command -v dnf)" ]; then
   echo "$red DNF Yüklü Olmadığından Zypper İle yüklenecek. $white" >&2
-  sudo zypper --gpg-auto-import-keys in -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks
+  sudo zypper --gpg-auto-import-keys in -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks Mesa-devel libOSMesa-devel
 else
 echo "$blue DNF ile Yüklenecek $white"
-  sudo dnf install -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks
+  sudo dnf install -y noto-sans-fonts gsettings-desktop-schemas xorg-x11-libs xorg-x11-server humanity-icon-theme patterns-fonts-fonts patterns-fonts-fonts_opt xorg-x11-fonts materia-gtk-theme gnome-tweaks Mesa-devel libOSMesa-devel
 fi
 fi
 ###################################################################
